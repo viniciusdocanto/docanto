@@ -11,22 +11,31 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Obter o código do repositório
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 2
-      
-    - name: Enviar arquivos via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+      - name: Obter o código do repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
         
-        # Opcionais úteis (descomente e ajuste se necessário):
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
         
-        # Pasta de destino no servidor (ex: se seu site não fica na raiz do FTP)
-        # server-dir: public_html/
+      - name: Enviar arquivos via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          
+          # Pasta local para enviar (o build do Vite joga para /dist)
+          local-dir: ./dist/
         
         # Excluir arquivos soltos do deploy (não envia o .git, por exemplo)
         # exclude: |

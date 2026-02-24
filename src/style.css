@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc;
+}
+
+.skill-tag {
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-line {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #e5e5e5;
+    z-index: 0;
+}
+
+@media (min-width: 768px) {
+    .timeline-line {
+        left: 50%;
+        margin-left: -1px;
+    }
+}
+
+/* Language Toggle Button Animation */
+.lang-btn {
+    transition: transform 0.2s;
+}
+
+.lang-btn:active {
+    transform: scale(0.95);
+}
