@@ -35,6 +35,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # O Vite gera o site na pasta dist/
           local-dir: ./dist/
+          server-dir: public_html/
         
         # Excluir arquivos soltos do deploy (não envia o .git, por exemplo)
         # exclude: |
