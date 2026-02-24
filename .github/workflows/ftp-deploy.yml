@@ -27,12 +27,14 @@ jobs:
       - name: Build project
         run: npm run build
         
-      - name: Enviar arquivos via FTP
+      - name: Enviar arquivos via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: sftp
+          port: 22
           
           # Pasta local para enviar (o build do Vite joga para /dist)
           local-dir: ./dist/
