@@ -34,9 +34,11 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
+          port: 21
+          timeout: 60000
           # O Vite gera o site na pasta dist/
           local-dir: ./dist/
-          server-dir: public_html/
+          server-dir: domains/docanto.net/public_html/
         
         # Excluir arquivos soltos do deploy (não envia o .git, por exemplo)
         # exclude: |
