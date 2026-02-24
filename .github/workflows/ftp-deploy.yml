@@ -33,6 +33,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
           # O Vite gera o site na pasta dist/
           local-dir: ./dist/
           server-dir: public_html/
