@@ -27,16 +27,14 @@ jobs:
       - name: Build project
         run: npm run build
         
-      - name: Enviar arquivos via SFTP/SSH
-        uses: appleboy/scp-action@master
+      - name: Enviar arquivos via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          host: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          source: "dist/*"
-          target: "public_html" # Altere caso o diretório raiz seja diferente (ex. htdocs, www)
-          strip_components: 1
+          # O Vite gera o site na pasta dist/
+          local-dir: ./dist/
         
         # Excluir arquivos soltos do deploy (não envia o .git, por exemplo)
         # exclude: |
