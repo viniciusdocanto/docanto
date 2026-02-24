@@ -33,16 +33,27 @@
               </div>
           </div>
       </div>
+
+      <!-- Botão Carregar Mais -->
+      <div v-if="!showAll && allJobs.length > 2" class="mt-8 text-center">
+          <button @click="showAll = true" class="px-8 py-3 bg-white border-2 border-orange-500 text-orange-600 font-bold rounded-full hover:bg-orange-500 hover:text-white transition-all shadow-md cursor-pointer uppercase text-sm tracking-wide">
+              {{ $t('loadMore') }}
+          </button>
+      </div>
   </section>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { tm } = useI18n()
 
-// Exibir todas as experiências diretamente
+const showAll = ref(false)
+
+// Exibir apenas as 2 primeiras por padrão
 const allJobs = computed(() => tm('experiences'))
-const visibleJobs = computed(() => allJobs.value)
+const visibleJobs = computed(() => {
+    return showAll.value ? allJobs.value : allJobs.value.slice(0, 2)
+})
 </script>
