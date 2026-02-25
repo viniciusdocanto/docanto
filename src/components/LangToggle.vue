@@ -1,10 +1,8 @@
 <template>
-  <div class="fixed top-4 right-4 z-50">
-      <button @click="toggleLanguage" class="lang-btn bg-white/90 backdrop-blur text-neutral-800 px-4 py-2 rounded-full shadow-lg border border-neutral-200 font-bold hover:bg-white hover:text-orange-700 transition-colors flex items-center gap-2 cursor-pointer">
-          <i class="fa-solid fa-globe"></i>
-          <span>{{ currentLang === 'pt' ? 'EN' : 'PT' }}</span>
-      </button>
-  </div>
+  <button @click="toggleLanguage" class="lang-btn bg-white/90 dark:bg-neutral-800/90 backdrop-blur text-neutral-800 dark:text-neutral-200 px-4 py-2 rounded-full shadow-lg border border-neutral-200 dark:border-neutral-700 font-bold hover:bg-white dark:hover:bg-neutral-700 hover:text-orange-700 transition-colors flex items-center gap-2 cursor-pointer h-[42px]">
+      <i class="fa-solid fa-globe"></i>
+      <span>{{ currentLang === 'pt' ? 'EN' : 'PT' }}</span>
+  </button>
 </template>
 
 <script setup>

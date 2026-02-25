@@ -29,7 +29,7 @@
               
               <!-- Profile Picture -->
               <div class="mt-8 md:mt-0">
-                  <img src="/profile.webp" alt="Vinicius Silva do Canto" class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-neutral-800 object-cover">
+                  <img src="/profile.jpg" alt="Vinicius Silva do Canto" class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-neutral-800 object-cover">
               </div>
           </div>
       </div>

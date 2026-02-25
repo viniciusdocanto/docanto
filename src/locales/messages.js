@@ -9,6 +9,7 @@ export default {
         skillsTitle: "Habilidades Técnicas",
         skillsSubtitle: "Tecnologias e ferramentas que domino",
         skillsBackendTitle: "Back-end, Dados & DevOps",
+        projectsTitle: "Projetos e Clientes",
         footerRights: "Todos os direitos reservados.",
         experiences: [
             {
@@ -104,6 +105,7 @@ export default {
         skillsTitle: "Technical Skills",
         skillsSubtitle: "Technologies and tools I master",
         skillsBackendTitle: "Back-end, Data & DevOps",
+        projectsTitle: "Projects and Clients",
         footerRights: "All rights reserved.",
         experiences: [
             {
