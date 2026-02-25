@@ -41,7 +41,7 @@ onMounted(() => {
   <main class="container mx-auto px-6 -mt-12 relative z-20 pb-20">
     <Summary class="reveal" />
     <Experience class="reveal" />
-    <!-- <Projects /> -->
+    <Projects />
     <Skills class="reveal" />
   </main>
   <Footer />
