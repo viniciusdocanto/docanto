@@ -10,6 +10,8 @@ export default {
         skillsSubtitle: "Tecnologias e ferramentas que domino",
         skillsBackendTitle: "Back-end, Dados & DevOps",
         projectsTitle: "Projetos e Clientes",
+        projectsPersonalTitle: "Projetos Pessoais",
+        clientsTitle: "Clientes Corporativos",
         footerRights: "Todos os direitos reservados.",
         experiences: [
             {
@@ -106,6 +108,8 @@ export default {
         skillsSubtitle: "Technologies and tools I master",
         skillsBackendTitle: "Back-end, Data & DevOps",
         projectsTitle: "Projects and Clients",
+        projectsPersonalTitle: "Personal Projects",
+        clientsTitle: "Corporate Clients",
         footerRights: "All rights reserved.",
         experiences: [
             {
