@@ -15,6 +15,7 @@ Anteriormente um arquivo HTML simples, o projeto foi totalmente reestruturado pa
 ## 🌎 Funcionalidades Destacadas
 * **Internacionalização (i18n):** Todo o conteúdo do site é mapeado via dicionário (`src/locales/messages.js`). Trocar o idioma alterna o estado localmente na hora. O `localStorage` grava a última escolha do usuário e reinicia a página usando essa memória nas visitas seguintes.
 * **Componentização:** A listagem de experiências profissionais (`Experience.vue`) e habilidades (`Skills.vue`) carregam dados JSON mapeados do I18n para iterar o HTML `v-for`, o que permite injetar novos blocos futuros editando apenas um arquivo chave.
+* **Projetos e Clientes:** Listagem atualizada com projetos recentes como Planning Poker, com separação dinâmica inteligente entre projetos pessoais e clientes corporativos.
 * **Automação de Deploy:** Qualquer push na branch `main` ativa o `ftp-deploy.yml`. O servidor GitHub baixa o repositório, instale o Node.js v20, executa `npm run build` localmente e, via FTP, envia apenas o conteúdo estático da pasta `/dist` para a HostGator, economizando espaço em disco e garantindo zero downtime.
 
 ## 🛠️ Como rodar localmente
