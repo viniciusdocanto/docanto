@@ -70,6 +70,14 @@ const projects = computed(() => [
         url: 'https://wtsiegelindex.cibccm.com/',
         tech: ['Alpine.js', 'Tailwind', 'Chart.js'],
         desc: locale.value === 'pt' ? 'Plataforma financeira de alto nível para o CIBC Capital Markets, com foco em visualização de dados e performance.' : 'High-level financial platform for CIBC Capital Markets, focusing on data visualization and performance.'
+    },
+    { 
+        id: 5, 
+        name: 'Planning Poker', 
+        icon: 'fa-solid fa-users', 
+        url: 'https://sites.docanto.net/planningpoker/',
+        tech: ['Vue 3', 'Vite', 'Tailwind', 'WebSocket'],
+        desc: locale.value === 'pt' ? 'Planning Poker em tempo real para times ágeis. Crie uma sala, compartilhe o link e vote com seu time.' : 'Real-time Planning Poker for agile teams. Create a room, share the link, and vote with your team.'
     }
 ])
 </script>
