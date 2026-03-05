@@ -10,6 +10,7 @@ Anteriormente um arquivo HTML simples, o projeto foi totalmente reestruturado pa
 * **TailwindCSS v4** (Utility-first CSS, otimizado para produção)
 * **Vue I18n** (Internacionalização reativa PT/EN sem carregamento extra)
 * **Font Awesome** (Pacote de ícones via CDN assíncrono)
+* **Favicon SVG** (Ícone moderno com símbolo de código)
 * **GitHub Actions** (Automação de CI/CD para Node.js build e upload via FTP)
 
 ## 🌎 Funcionalidades Destacadas
