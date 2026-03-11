@@ -9,14 +9,14 @@
       <div class="flex justify-center gap-6">
         <a
           href="mailto:eu@viniciusdocanto.com.br"
-          alt="E-mail"
+          aria-label="E-mail"
           class="text-neutral-800 dark:text-neutral-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors"
         >
           <Mail class="w-5 h-5" />
         </a>
         <a
           href="https://linkedin.com/in/viniciusdocanto"
-          alt="Linkedin"
+          aria-label="Linkedin"
           target="_blank"
           class="text-neutral-800 dark:text-neutral-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors"
         >
@@ -24,7 +24,7 @@
         </a>
         <a
           href="https://github.com/viniciusdocanto"
-          alt="GitHub"
+          aria-label="GitHub"
           target="_blank"
           class="text-neutral-800 dark:text-neutral-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors"
         >
