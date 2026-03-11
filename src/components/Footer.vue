@@ -12,7 +12,7 @@
           alt="E-mail"
           class="text-neutral-800 dark:text-neutral-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors"
         >
-          <i class="fa-solid fa-envelope text-xl"></i> E-mail
+          <Mail class="w-5 h-5" />
         </a>
         <a
           href="https://linkedin.com/in/viniciusdocanto"
@@ -20,7 +20,7 @@
           target="_blank"
           class="text-neutral-800 dark:text-neutral-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors"
         >
-          <i class="fa-brands fa-linkedin text-xl"></i> Linkedin
+          <Linkedin class="w-5 h-5" />
         </a>
         <a
           href="https://github.com/viniciusdocanto"
@@ -28,7 +28,7 @@
           target="_blank"
           class="text-neutral-800 dark:text-neutral-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors"
         >
-          <i class="fa-brands fa-github text-xl"></i> GitHub
+          <Github class="w-5 h-5" />
         </a>
       </div>
     </div>
@@ -36,5 +36,6 @@
 </template>
 
 <script setup>
+import { Mail, Linkedin, Github } from 'lucide-vue-next'
 const currentYear = new Date().getFullYear()
 </script>

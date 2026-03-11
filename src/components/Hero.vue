@@ -22,14 +22,14 @@
               href="mailto:eu@viniciusdocanto.com.br"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
-              <i class="fa-solid fa-envelope"></i> eu@viniciusdocanto.com.br
+              <Mail class="w-4 h-4" /> eu@viniciusdocanto.com.br
             </a>
             <span class="hidden md:inline text-neutral-600">|</span>
             <a
               href="tel:+5521969244912"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i> +55 21 9 6924 4912
+              <Phone class="w-4 h-4" /> +55 21 9 6924 4912
             </a>
             <span class="hidden md:inline text-neutral-600">|</span>
             <a
@@ -37,7 +37,7 @@
               target="_blank"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
-              <i class="fa-brands fa-linkedin"></i> in/viniciusdocanto
+              <Linkedin class="w-4 h-4" /> in/viniciusdocanto
             </a>
             <span class="hidden md:inline text-neutral-600">|</span>
             <a
@@ -45,7 +45,7 @@
               target="_blank"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
-              <i class="fa-brands fa-github"></i> /viniciusdocanto
+              <Github class="w-4 h-4" /> /viniciusdocanto
             </a>
           </div>
         </div>
@@ -62,3 +62,7 @@
     </div>
   </header>
 </template>
+
+<script setup>
+import { Mail, Phone, Linkedin, Github } from 'lucide-vue-next'
+</script>

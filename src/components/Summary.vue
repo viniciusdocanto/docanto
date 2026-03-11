@@ -5,7 +5,7 @@
     <h3
       class="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4 flex items-center gap-3"
     >
-      <i class="fa-solid fa-user-circle text-orange-700 dark:text-orange-500"></i>
+      <CircleUser class="w-7 h-7 text-orange-700 dark:text-orange-500" />
       {{ $t('summaryTitle') }}
     </h3>
     <div class="text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
@@ -16,3 +16,7 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { CircleUser } from 'lucide-vue-next'
+</script>

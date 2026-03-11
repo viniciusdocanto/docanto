@@ -18,12 +18,10 @@
         <div
           class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-500 transition-colors"
         >
-          <i
-            :class="[
-              project.icon,
-              'text-orange-600 dark:text-orange-400 group-hover:text-white text-xl',
-            ]"
-          ></i>
+          <component
+            :is="project.icon"
+            class="w-6 h-6 text-orange-600 dark:text-orange-400 group-hover:text-white"
+          />
         </div>
         <h4 class="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
           {{ project.name }}
@@ -47,7 +45,7 @@
           class="mt-4 pt-4 border-t border-neutral-50 dark:border-neutral-700 flex items-center justify-between text-orange-600 dark:text-orange-400 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity"
         >
           <span>{{ locale === 'pt' ? 'Ver Projeto' : 'View Project' }}</span>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <ExternalLink class="w-4 h-4" />
         </div>
       </a>
     </div>
@@ -70,12 +68,10 @@
         <div
           class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-500 transition-colors"
         >
-          <i
-            :class="[
-              client.icon,
-              'text-blue-600 dark:text-blue-400 group-hover:text-white text-xl',
-            ]"
-          ></i>
+          <component
+            :is="client.icon"
+            class="w-6 h-6 text-blue-600 dark:text-blue-400 group-hover:text-white"
+          />
         </div>
         <h4 class="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
           {{ client.name }}
@@ -99,7 +95,7 @@
           class="mt-4 pt-4 border-t border-neutral-50 dark:border-neutral-700 flex items-center justify-between text-blue-600 dark:text-blue-400 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity"
         >
           <span>{{ locale === 'pt' ? 'Ver Cliente' : 'View Client' }}</span>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <ExternalLink class="w-4 h-4" />
         </div>
       </a>
     </div>
@@ -107,8 +103,9 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, markRaw } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { Search, CloudSun, Users, Briefcase, LineChart, ExternalLink } from 'lucide-vue-next'
 
 const { locale } = useI18n()
 
@@ -116,7 +113,7 @@ const personalProjects = computed(() => [
   {
     id: 1,
     name: 'PuxaVagas',
-    icon: 'fa-solid fa-search-dollar',
+    icon: markRaw(Search),
     url: 'https://vagas.docanto.net',
     tech: ['Vue 3', 'Vite', 'Tailwind', 'Supabase'],
     desc:
@@ -127,7 +124,7 @@ const personalProjects = computed(() => [
   {
     id: 2,
     name: 'WeatherTrip',
-    icon: 'fa-solid fa-cloud-sun-rain',
+    icon: markRaw(CloudSun),
     url: 'https://sites.docanto.net/weathertrip/',
     tech: ['JavaScript', 'Leaflet.js', 'Weather API'],
     desc:
@@ -138,7 +135,7 @@ const personalProjects = computed(() => [
   {
     id: 3,
     name: 'Planning Poker',
-    icon: 'fa-solid fa-users',
+    icon: markRaw(Users),
     url: 'https://sites.docanto.net/planningpoker/',
     tech: ['Vue 3', 'Vite', 'Tailwind', 'WebSocket'],
     desc:
@@ -152,7 +149,7 @@ const corporateClients = computed(() => [
   {
     id: 4,
     name: 'Teneo',
-    icon: 'fa-solid fa-briefcase',
+    icon: markRaw(Briefcase),
     url: 'https://www.teneo.com',
     tech: ['WordPress', 'PHP', 'Tailwind'],
     desc:
@@ -163,7 +160,7 @@ const corporateClients = computed(() => [
   {
     id: 5,
     name: 'CIBC Capital Markets',
-    icon: 'fa-solid fa-chart-line',
+    icon: markRaw(LineChart),
     url: 'https://wtsiegelindex.cibccm.com/',
     tech: ['Alpine.js', 'Tailwind', 'Chart.js'],
     desc:

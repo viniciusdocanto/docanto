@@ -5,12 +5,14 @@
     :aria-label="isDark ? $t('themeToggleLightAria') : $t('themeToggleDarkAria')"
     @click="toggleTheme"
   >
-    <i :class="['fa-solid', isDark ? 'fa-sun' : 'fa-moon']"></i>
+    <Sun v-if="isDark" class="w-5 h-5" />
+    <Moon v-else class="w-5 h-5" />
   </button>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { Sun, Moon } from 'lucide-vue-next'
 
 const isDark = ref(false)
 
@@ -41,6 +43,7 @@ onMounted(() => {
   transition: transform 0.2s;
   width: 42px;
   height: 42px;
+  padding: 0;
 }
 .theme-btn:active {
   transform: scale(0.95);

@@ -24,9 +24,7 @@
             v-if="index % 2 === 0"
             class="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-all border-t-2 w-full"
             :class="[
-              job.color === 'orange'
-                ? 'border-orange-500'
-                : 'border-neutral-700 dark:border-neutral-600',
+              index % 2 === 0 ? 'border-orange-500' : 'border-neutral-700 dark:border-neutral-600',
               selectedSkill && matchesSkill(job.desc)
                 ? 'ring-2 ring-orange-500 scale-105 z-10'
                 : '',
@@ -45,9 +43,9 @@
         <!-- Center Icon -->
         <div
           class="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 rounded-full border-4 border-white dark:border-neutral-900 shadow items-center justify-center order-1 mb-4 md:mb-0 hidden md:flex"
-          :class="job.color === 'orange' ? 'bg-orange-500' : 'bg-neutral-700 dark:bg-neutral-600'"
+          :class="index % 2 === 0 ? 'bg-orange-500' : 'bg-neutral-700 dark:bg-neutral-600'"
         >
-          <i :class="[job.icon, 'text-white text-xs']"></i>
+          <component :is="iconMap[job.icon]" class="w-4 h-4 text-white" />
         </div>
 
         <!-- Right Side -->
@@ -56,9 +54,7 @@
             v-if="index % 2 !== 0"
             class="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-all border-t-2 w-full"
             :class="[
-              job.color === 'orange'
-                ? 'border-orange-500'
-                : 'border-neutral-700 dark:border-neutral-600',
+              index % 2 === 0 ? 'border-orange-500' : 'border-neutral-700 dark:border-neutral-600',
               selectedSkill && matchesSkill(job.desc)
                 ? 'ring-2 ring-orange-500 scale-105 z-10'
                 : '',
@@ -91,6 +87,19 @@
 <script setup>
 import { ref, computed, inject } from 'vue'
 import { useI18n } from 'vue-i18n'
+import {
+  GitBranch,
+  Laptop,
+  Code,
+  Globe,
+  Umbrella,
+  Paintbrush,
+  Users,
+  Rocket,
+  Server,
+} from 'lucide-vue-next'
+
+const iconMap = { GitBranch, Laptop, Code, Globe, Umbrella, Paintbrush, Users, Rocket, Server }
 
 const { tm } = useI18n()
 

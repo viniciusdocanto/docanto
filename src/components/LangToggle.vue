@@ -5,7 +5,7 @@
     :title="$t('langToggleAria')"
     @click="toggleLanguage"
   >
-    <i class="fa-solid fa-globe"></i>
+    <Globe class="w-5 h-5" />
     <span>{{ currentLang === 'pt' ? 'EN' : 'PT' }}</span>
   </button>
 </template>
@@ -13,6 +13,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { Globe } from 'lucide-vue-next'
 
 const { locale } = useI18n()
 const currentLang = computed(() => locale.value)

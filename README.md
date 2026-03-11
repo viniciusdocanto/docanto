@@ -11,7 +11,7 @@ Anteriormente um arquivo HTML simples, o projeto foi totalmente reestruturado pa
 - **TailwindCSS v4** (Utility-first CSS, otimizado para produção)
 - **Vue I18n** (Internacionalização reativa PT/EN sem carregamento extra)
 - **VueUse Head** (Manipulação reativa e dinâmica de tags `<head>`)
-- **Font Awesome** (Pacote de ícones via CDN assíncrono)
+- **Lucide Icons** (Pacote de ícones SVG com tree-shaking via `lucide-vue-next`)
 - **Favicon SVG** (Ícone moderno com símbolo de código)
 - **Vitest & Vue Test Utils** (Testes unitários automatizados)
 - **ESLint, Prettier & Husky** (Linter, formatação e Git hooks de pre-commit)
@@ -53,11 +53,13 @@ Você pode visualizar a aplicação localmente pelo `http://localhost:5173`. Mod
 O projeto conta com ferramentas de checagem estática e testes unitários:
 
 **Rodar testes (Vitest):**
+
 ```bash
 npm run test
 ```
 
 **Rodar formatação e linting:**
+
 ```bash
 npm run format
 npm run lint
