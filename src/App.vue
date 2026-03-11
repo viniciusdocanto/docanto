@@ -3,14 +3,14 @@ import LangToggle from './components/LangToggle.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
 import Hero from './components/Hero.vue'
 import Summary from './components/Summary.vue'
-import { ref, provide, defineAsyncComponent, computed } from 'vue'
+import { ref, provide, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@vueuse/head'
 
-const Experience = defineAsyncComponent(() => import('./components/Experience.vue'))
-const Projects = defineAsyncComponent(() => import('./components/Projects.vue'))
-const Skills = defineAsyncComponent(() => import('./components/Skills.vue'))
-const Footer = defineAsyncComponent(() => import('./components/Footer.vue'))
+import Experience from './components/Experience.vue'
+import Projects from './components/Projects.vue'
+import Skills from './components/Skills.vue'
+import Footer from './components/Footer.vue'
 
 const selectedSkill = ref('')
 provide('selectedSkill', selectedSkill)
