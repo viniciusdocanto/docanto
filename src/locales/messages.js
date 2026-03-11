@@ -15,6 +15,13 @@ export default {
     projectsPersonalTitle: 'Projetos Pessoais',
     clientsTitle: 'Clientes Corporativos',
     footerRights: 'Todos os direitos reservados.',
+    metaTitle: 'Vinicius do Canto | Desenvolvedor Front-end Sênior & DevOps',
+    metaDesc:
+      'Desenvolvedor Front-end Sênior com vasta experiência em grandes projetos, unindo desenvolvimento ágil e DevOps.',
+    metaImage: 'https://docanto.net/og-image-pt.png',
+    langToggleAria: 'Alternar para idioma inglês',
+    themeToggleDarkAria: 'Ativar modo escuro',
+    themeToggleLightAria: 'Ativar modo claro',
     experiences: [
       {
         id: 1,
@@ -115,6 +122,13 @@ export default {
     projectsPersonalTitle: 'Personal Projects',
     clientsTitle: 'Corporate Clients',
     footerRights: 'All rights reserved.',
+    metaTitle: 'Vinicius do Canto | Senior Front-end Developer & DevOps',
+    metaDesc:
+      'Senior Front-end Developer with vast experience in large projects, bridging agile development and DevOps.',
+    metaImage: 'https://docanto.net/og-image-en.png',
+    langToggleAria: 'Switch to Portuguese language',
+    themeToggleDarkAria: 'Enable dark mode',
+    themeToggleLightAria: 'Enable light mode',
     experiences: [
       {
         id: 1,

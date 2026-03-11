@@ -11,8 +11,8 @@ describe('LangToggle', () => {
       legacy: false,
       locale: 'pt',
       messages: {
-        pt: {},
-        en: {},
+        pt: { langToggleAria: 'Alternar' },
+        en: { langToggleAria: 'Switch' },
       },
     })
 

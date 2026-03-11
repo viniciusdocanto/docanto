@@ -1,7 +1,8 @@
 <template>
   <button
     class="theme-btn bg-white/90 dark:bg-neutral-800/90 backdrop-blur text-neutral-800 dark:text-neutral-200 px-4 py-2 rounded-full shadow-lg border border-neutral-200 dark:border-neutral-700 font-bold hover:bg-white dark:hover:bg-neutral-700 hover:text-orange-700 transition-colors flex items-center justify-center cursor-pointer"
-    :title="isDark ? 'Ativar modo claro' : 'Ativar modo escuro'"
+    :title="isDark ? $t('themeToggleLightAria') : $t('themeToggleDarkAria')"
+    :aria-label="isDark ? $t('themeToggleLightAria') : $t('themeToggleDarkAria')"
     @click="toggleTheme"
   >
     <i :class="['fa-solid', isDark ? 'fa-sun' : 'fa-moon']"></i>

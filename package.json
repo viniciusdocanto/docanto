@@ -1,7 +1,7 @@
 {
   "name": "docanto.net",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "vue": "^3.5.25"
   },
   "devDependencies": {

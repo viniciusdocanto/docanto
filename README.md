@@ -10,6 +10,7 @@ Anteriormente um arquivo HTML simples, o projeto foi totalmente reestruturado pa
 - **Vite** (Para bundle ultrarrápido)
 - **TailwindCSS v4** (Utility-first CSS, otimizado para produção)
 - **Vue I18n** (Internacionalização reativa PT/EN sem carregamento extra)
+- **VueUse Head** (Manipulação reativa e dinâmica de tags `<head>`)
 - **Font Awesome** (Pacote de ícones via CDN assíncrono)
 - **Favicon SVG** (Ícone moderno com símbolo de código)
 - **Vitest & Vue Test Utils** (Testes unitários automatizados)
@@ -20,6 +21,7 @@ Anteriormente um arquivo HTML simples, o projeto foi totalmente reestruturado pa
 
 - **Performance com Lazy Loading:** Otimização do _bundle_ inicial deferindo o carregamento de componentes pesados (Experiência, Projetos, Skills e Footer) via `defineAsyncComponent` em conjunto com a diretiva de monitoramento de viewport `v-reveal`.
 - **Internacionalização (i18n):** Todo o conteúdo do site é mapeado via dicionário (`src/locales/messages.js`). Trocar o idioma alterna o estado localmente na hora. O `localStorage` grava a última escolha do usuário e reinicia a página usando essa memória nas visitas seguintes.
+- **SEO & Acessibilidade Genéricas:** O `<title>`, `lang` e as principais `meta tags` (Open Graph e Twitter) são reativas e adaptam-se imediatamente ao idioma escolhido antes de que a página seja lida, enquanto botões interativos adotam `aria-labels` fluentes e dinâmicos para a leitura em Leitores de Tela.
 - **Componentização:** A listagem de experiências profissionais (`Experience.vue`) e habilidades (`Skills.vue`) carregam dados JSON mapeados do I18n para iterar o HTML `v-for`, o que permite injetar novos blocos futuros editando apenas um arquivo chave.
 - **Projetos e Clientes:** Listagem atualizada com projetos recentes como Planning Poker, com separação dinâmica inteligente entre projetos pessoais e clientes corporativos.
 - **Automação de Deploy:** Qualquer push na branch `main` ativa o `ftp-deploy.yml`. O servidor GitHub baixa o repositório, instale o Node.js v20, executa `npm run build` localmente e, via FTP, envia apenas o conteúdo estático da pasta `/dist` para a HostGator, economizando espaço em disco e garantindo zero downtime.
