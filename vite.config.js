@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath, URL } from 'node:url'
 
 // Custom plugin to inline CSS for PageSpeed Optimization
 const inlineCssPlugin = () => {
@@ -42,7 +43,33 @@ const inlineCssPlugin = () => {
 
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
   plugins: [vue(), tailwindcss(), inlineCssPlugin()],
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          let extType = assetInfo.name.split('.').at(1)
+          if (/png|jpe?g|webp|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = 'img'
+          } else if (/css/i.test(extType)) {
+            extType = 'css'
+          } else if (/woff2?|eot|ttf|otf/i.test(extType)) {
+            extType = 'fonts'
+          } else {
+            extType = 'misc' // other
+          }
+          return `assets/${extType}/[name]-[hash][extname]`
+        },
+      },
+    },
+  },
   test: {
     environment: 'jsdom',
   },

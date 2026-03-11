@@ -1,9 +1,9 @@
 <template>
   <header
     class="text-white pt-20 pb-24 relative overflow-hidden bg-cover bg-center"
-    style="
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/bg.webp');
-    "
+    :style="{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${bgImg}')`,
+    }"
   >
     <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
       <div class="flex flex-col md:flex-row items-center justify-between">
@@ -53,7 +53,7 @@
         <!-- Profile Picture -->
         <div class="mt-8 md:mt-0">
           <img
-            src="/profile.webp"
+            :src="profileImg"
             alt="Vinicius Silva do Canto"
             class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-neutral-800 object-cover"
           />
@@ -65,4 +65,6 @@
 
 <script setup>
 import { Mail, Phone, Linkedin, Github } from 'lucide-vue-next'
+import bgImg from '@/assets/img/bg.webp'
+import profileImg from '@/assets/img/profile.webp'
 </script>
