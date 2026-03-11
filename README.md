@@ -14,6 +14,7 @@ Anteriormente um arquivo HTML simples, o projeto foi totalmente reestruturado pa
 * **GitHub Actions** (Automação de CI/CD para Node.js build e upload via FTP)
 
 ## 🌎 Funcionalidades Destacadas
+* **Performance com Lazy Loading:** Otimização do _bundle_ inicial deferindo o carregamento de componentes pesados (Experiência, Projetos, Skills e Footer) via `defineAsyncComponent` em conjunto com a diretiva de monitoramento de viewport `v-reveal`.
 * **Internacionalização (i18n):** Todo o conteúdo do site é mapeado via dicionário (`src/locales/messages.js`). Trocar o idioma alterna o estado localmente na hora. O `localStorage` grava a última escolha do usuário e reinicia a página usando essa memória nas visitas seguintes.
 * **Componentização:** A listagem de experiências profissionais (`Experience.vue`) e habilidades (`Skills.vue`) carregam dados JSON mapeados do I18n para iterar o HTML `v-for`, o que permite injetar novos blocos futuros editando apenas um arquivo chave.
 * **Projetos e Clientes:** Listagem atualizada com projetos recentes como Planning Poker, com separação dinâmica inteligente entre projetos pessoais e clientes corporativos.

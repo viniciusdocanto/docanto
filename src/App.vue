@@ -3,32 +3,32 @@ import LangToggle from './components/LangToggle.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
 import Hero from './components/Hero.vue'
 import Summary from './components/Summary.vue'
-import Experience from './components/Experience.vue'
-import Projects from './components/Projects.vue'
-import Skills from './components/Skills.vue'
-import Footer from './components/Footer.vue'
-import { onMounted, ref, provide } from 'vue'
+import { ref, provide, defineAsyncComponent } from 'vue'
+
+const Experience = defineAsyncComponent(() => import('./components/Experience.vue'))
+const Projects = defineAsyncComponent(() => import('./components/Projects.vue'))
+const Skills = defineAsyncComponent(() => import('./components/Skills.vue'))
+const Footer = defineAsyncComponent(() => import('./components/Footer.vue'))
 
 const selectedSkill = ref('')
 provide('selectedSkill', selectedSkill)
 
-onMounted(() => {
-  const observerOptions = {
-    threshold: 0.1
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active')
-      }
-    })
-  }, observerOptions)
-
-  document.querySelectorAll('.reveal').forEach((el) => {
-    observer.observe(el)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active')
+    }
   })
-})
+}, { threshold: 0.1 })
+
+const vReveal = {
+  mounted: (el) => {
+    observer.observe(el)
+  },
+  unmounted: (el) => {
+    observer.unobserve(el)
+  }
+}
 </script>
 
 <template>
@@ -39,10 +39,10 @@ onMounted(() => {
   </div>
   <Hero />
   <main class="container mx-auto px-6 -mt-12 relative z-20 pb-20">
-    <Summary class="reveal" />
-    <Experience class="reveal" />
-    <Projects />
-    <Skills class="reveal" />
+    <Summary v-reveal class="reveal" />
+    <Experience v-reveal class="reveal" />
+    <Projects v-reveal class="reveal" />
+    <Skills v-reveal class="reveal" />
   </main>
   <Footer />
 </div>
