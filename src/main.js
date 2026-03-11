@@ -7,10 +7,10 @@ import messages from './locales/messages'
 const savedLang = localStorage.getItem('preferredLang') || 'pt'
 
 const i18n = createI18n({
-    legacy: false,
-    locale: savedLang,
-    fallbackLocale: 'en',
-    messages,
+  legacy: false,
+  locale: savedLang,
+  fallbackLocale: 'en',
+  messages,
 })
 
 const app = createApp(App)

@@ -9,13 +9,13 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Obter o código do repositório
         uses: actions/checkout@v4
         with:
           fetch-depth: 2
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -26,7 +26,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-        
+
       - name: Enviar arquivos via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -39,7 +39,7 @@ jobs:
           # O Vite gera o site na pasta dist/
           local-dir: ./dist/
           server-dir: domains/docanto.net/public_html/
-        
+
         # Excluir arquivos soltos do deploy (não envia o .git, por exemplo)
         # exclude: |
         #   **/.git*

@@ -36,6 +36,9 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 desktop.ini
+.agent/
+.agents/
+skills-lock.json
 
 # Arquivos temporários
 *.log
