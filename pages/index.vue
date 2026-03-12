@@ -7,6 +7,10 @@ const { t, locale } = useI18n()
 useHead({
   title: () => t('metaTitle'),
   htmlAttrs: { lang: locale },
+  link: [
+    { rel: 'preload', as: 'image', href: '/img/bg.webp', fetchpriority: 'high' },
+    { rel: 'preload', as: 'image', href: '/img/profile.webp', fetchpriority: 'high' },
+  ],
   meta: [
     { name: 'description', content: () => t('metaDesc') },
     { property: 'og:title', content: () => t('metaTitle') },

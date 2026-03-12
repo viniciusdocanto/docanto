@@ -56,6 +56,8 @@
           <img
             src="/img/profile.webp"
             alt="Vinicius Silva do Canto"
+            fetchpriority="high"
+            loading="eager"
             class="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-neutral-800 object-cover"
           />
         </div>
