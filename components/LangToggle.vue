@@ -14,14 +14,16 @@
 import { computed } from 'vue'
 import { Globe } from 'lucide-vue-next'
 
-const { locale } = useI18n()
+const { locale, setLocale } = useI18n()
 const currentLang = computed(() => locale.value)
 
 const toggleLanguage = () => {
-  locale.value = locale.value === 'pt' ? 'en' : 'pt'
+  const nextLocale = locale.value === 'pt' ? 'en' : 'pt'
+  setLocale(nextLocale)
+
   // Persist preference on client only
   if (import.meta.client) {
-    localStorage.setItem('preferredLang', locale.value)
+    localStorage.setItem('preferredLang', nextLocale)
   }
 }
 </script>

@@ -31,12 +31,12 @@
             ]"
           >
             <h4 class="text-xl font-bold text-neutral-800 dark:text-neutral-100">
-              {{ job.title }}
+              {{ $rt(job.title) }}
             </h4>
             <div class="text-orange-800 dark:text-orange-400 font-semibold mb-2">
-              {{ job.company }} <span v-if="job.period">| {{ job.period }}</span>
+              {{ $rt(job.company) }} <span v-if="job.period">| {{ $rt(job.period) }}</span>
             </div>
-            <p class="text-neutral-600 dark:text-neutral-300">{{ job.desc }}</p>
+            <p class="text-neutral-600 dark:text-neutral-300">{{ $rt(job.desc) }}</p>
           </div>
         </div>
 
@@ -61,12 +61,12 @@
             ]"
           >
             <h4 class="text-xl font-bold text-neutral-800 dark:text-neutral-100">
-              {{ job.title }}
+              {{ $rt(job.title) }}
             </h4>
             <div class="text-orange-800 dark:text-orange-400 font-semibold mb-2">
-              {{ job.company }} <span v-if="job.period">| {{ job.period }}</span>
+              {{ $rt(job.company) }} <span v-if="job.period">| {{ $rt(job.period) }}</span>
             </div>
-            <p class="text-neutral-600 dark:text-neutral-300">{{ job.desc }}</p>
+            <p class="text-neutral-600 dark:text-neutral-300">{{ $rt(job.desc) }}</p>
           </div>
         </div>
       </div>
