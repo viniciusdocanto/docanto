@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   ssr: true,
   future: { compatibilityVersion: 4 },
   srcDir: '.',
+  experimental: {
+    inlineSSRStyles: true,
+  },
 
   // Static Site Generation
   nitro: {
@@ -23,9 +26,6 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     detectBrowserLanguage: false,
   },
-
-  // CSS
-  css: ['~/assets/css/main.css'],
 
   // App-level head (static, non-reactive)
   app: {
