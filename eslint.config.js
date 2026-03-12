@@ -5,6 +5,9 @@ export default [
   ...pluginVue.configs['flat/recommended'],
   eslintConfigPrettier,
   {
+    ignores: ['.nuxt/**', '.output/**'],
+  },
+  {
     rules: {
       'vue/multi-word-component-names': 'off',
       'no-undef': 'off', // Vitest setup might have globals
