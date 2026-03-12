@@ -6,6 +6,8 @@ node_modules/
 # Produção / Build
 dist/
 dist-ssr/
+.nuxt/
+.output/
 *.local
 
 # Logs
