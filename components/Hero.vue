@@ -36,6 +36,7 @@
             <a
               href="https://linkedin.com/in/viniciusdocanto"
               target="_blank"
+              rel="noopener noreferrer"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
               <Linkedin class="w-4 h-4" /> in/viniciusdocanto
@@ -44,6 +45,7 @@
             <a
               href="https://github.com/viniciusdocanto"
               target="_blank"
+              rel="noopener noreferrer"
               class="hover:text-white transition-colors flex items-center gap-2"
             >
               <Github class="w-4 h-4" /> /viniciusdocanto

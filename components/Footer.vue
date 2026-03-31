@@ -18,6 +18,7 @@
           href="https://linkedin.com/in/viniciusdocanto"
           aria-label="Linkedin"
           target="_blank"
+          rel="noopener noreferrer"
           class="text-neutral-800 dark:text-neutral-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors"
         >
           <Linkedin class="w-5 h-5" />

@@ -13,6 +13,7 @@
         :key="project.id"
         :href="project.url"
         target="_blank"
+        rel="noopener noreferrer"
         class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-md border border-neutral-100 dark:border-neutral-700 hover:shadow-xl transition-all group flex flex-col h-full cursor-pointer no-underline"
       >
         <div
@@ -59,6 +60,7 @@
         :key="client.id"
         :href="client.url"
         target="_blank"
+        rel="noopener noreferrer"
         class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-md border border-neutral-100 dark:border-neutral-700 hover:shadow-xl transition-all group flex flex-col h-full cursor-pointer no-underline"
       >
         <div
