@@ -41,6 +41,7 @@ desktop.ini
 .agent/
 .agents/
 skills-lock.json
+SECURITY.md
 
 # Arquivos temporários
 *.log
