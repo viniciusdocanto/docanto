@@ -29,7 +29,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "commander": "^13.1.0",
     "eslint": "^10.0.3",
-    "eslint-plugin-vue": "^10.8.0",
+    "eslint-plugin-vue": "^10.9.2",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "prettier": "^3.8.1",
