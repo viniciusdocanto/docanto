@@ -28,7 +28,7 @@
   "devDependencies": {
     "@vue/eslint-config-prettier": "^10.2.0",
     "commander": "^15.0.0",
-    "eslint": "^10.6.0",
+    "eslint": "^10.7.0",
     "eslint-plugin-vue": "^10.9.2",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
