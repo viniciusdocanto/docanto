@@ -19,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^10.2.3",
+    "@nuxtjs/i18n": "^10.4.1",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "lucide-vue-next": "^1.0.0",
     "nuxt": "^4.4.8",
