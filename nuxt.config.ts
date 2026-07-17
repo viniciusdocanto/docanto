@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   ssr: true,
   future: { compatibilityVersion: 4 },
@@ -13,7 +15,15 @@ export default defineNuxtConfig({
   },
 
   // Modules
-  modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/i18n'],
+
+  // Global CSS
+  css: ['~/assets/css/main.css'],
+
+  // Vite plugins
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
   // i18n configuration
   i18n: {
@@ -39,11 +49,6 @@ export default defineNuxtConfig({
         },
       ],
     },
-  },
-
-  // Tailwind config
-  tailwindcss: {
-    configPath: './tailwind.config.js',
   },
 
   devtools: { enabled: false },
