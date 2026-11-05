@@ -32,7 +32,9 @@ jobs:
       - name: build
         run: npm run generate
 
-      - name: Enviar arquivos via FTP
+      - name: Enviar arquivos via FTP (Tentativa 1)
+        id: deploy_ftp
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -41,12 +43,22 @@ jobs:
           protocol: ftp
           port: 21
           timeout: 60000
-          # O Vite gera o site na pasta dist/
           local-dir: ./.output/public/
           server-dir: domains/docanto.net/public_html/
 
-        # Excluir arquivos soltos do deploy (não envia o .git, por exemplo)
-        # exclude: |
-        #   **/.git*
-        #   **/.git*/**
-        #   **/node_modules/**
+      - name: Aguardar antes de retentar
+        if: steps.deploy_ftp.outcome == 'failure'
+        run: sleep 10
+
+      - name: Enviar arquivos via FTP (Tentativa 2 - Retentativa)
+        if: steps.deploy_ftp.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          timeout: 60000
+          local-dir: ./.output/public/
+          server-dir: domains/docanto.net/public_html/
