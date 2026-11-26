@@ -118,7 +118,7 @@ const personalProjects = computed(() => [
     id: 2,
     name: 'WeatherTrip',
     icon: markRaw(CloudSun),
-    url: 'https://sites.docanto.net/weathertrip/',
+    url: 'https://rota.docanto.net',
     tech: ['JavaScript', 'Leaflet.js', 'Weather API'],
     desc:
       locale.value === 'pt'
@@ -129,7 +129,7 @@ const personalProjects = computed(() => [
     id: 3,
     name: 'Planning Poker',
     icon: markRaw(Users),
-    url: 'https://sites.docanto.net/planningpoker/',
+    url: 'https://poker.docanto.net',
     tech: ['Vue 3', 'Vite', 'Tailwind', 'WebSocket'],
     desc:
       locale.value === 'pt'
